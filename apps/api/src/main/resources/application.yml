@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo_db
+    username: todo_user
+    password: todo_password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+app:
+  jwt:
+    secret: ${APP_JWT_SECRET}
+    expiration-minutes: 60
+
+server:
+  port: 8080

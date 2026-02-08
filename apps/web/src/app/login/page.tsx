@@ -8,8 +8,8 @@ const API = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState("you@example.com");
-  const [password, setPassword] = useState("secret123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -46,16 +46,16 @@ export default function LoginPage() {
 
         <div className="mt-5 space-y-3">
           <input
-            className="w-full rounded border border-stone-300 px-3 py-2 outline-none focus:border-stone-500"
+            className="w-full rounded border border-stone-300 px-3 py-2 outline-none focus:border-stone-500 placeholder:text-stone-400"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
+            placeholder="Enter your email"
           />
           <input
-            className="w-full rounded border border-stone-300 px-3 py-2 outline-none focus:border-stone-500"
+            className="w-full rounded border border-stone-300 px-3 py-2 outline-none focus:border-stone-500 placeholder:text-stone-400"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
+            placeholder="Enter your password"
             type="password"
           />
         </div>
